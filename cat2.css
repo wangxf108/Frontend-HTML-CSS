@@ -1,0 +1,54 @@
+
+/* 调整边框宽度，背景色的 */
+<style>
+  .injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  .yellow-box {
+    background-color: yellow;
+    padding: 10px;
+  }
+
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    padding: 20px;
+    /* 可以调整所在区域的上下左右空格距离 */
+
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+  }
+    /* 也可以按照上右下左的顺讯直接输入 */
+    .red-box {
+     background-color: crimson;
+     color: #fff;
+     margin: 20px 40px 20px 40px;
+    }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+  }
+</style>
+<h5 class="injected-text">margin</h5>
+
+<div class="box yellow-box">
+  <h5 class="box red-box">padding</h5>
+  <h5 class="box blue-box">padding</h5>
+</div>

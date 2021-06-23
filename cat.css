@@ -1,0 +1,102 @@
+/* 引入谷歌字体库，下面的Lobster就是来自这个字体库 */
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+/* style为一组定义html格式的css命令，可以定义对应位置的颜色，大小 */
+<style>
+
+  /* 声明class的时候，必须在名字前面加 . 符号 */
+  .red-text {
+    color: red;
+  }
+  /* 声明id的时候，必须在名字前面加 # 符号 */
+  #cat-photo-form{
+    background-color: green
+  }
+
+  p {
+    font-size: 16px;
+    font-family: monospace;
+  }
+
+  /* 此处添加两种字体，是防止第一种谷歌字体失效以后，自动降级到第二种字体monospace */
+  h2 {
+    font-family: Lobster, monospace;
+  }
+
+  /* 创建一个新的class，然后在下方图片中引用，来定义图片大小 */
+  .smaller-image {
+    width: 100px;
+  }
+
+  /* 创建新class，并且一个元素可以应用多个class，需要用空格来分隔 */
+  /* border-radius,让图片角变圆润，后面加数字，或者百分比都可以 */
+  .thick-green-border{
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+  }
+
+  .silver-background{
+    background-color: silver
+  }
+</style>
+
+
+
+
+/* h2标题，应用了一个class，“red-text”，对应与style中的.red-text,在那里被定义 */
+<h2 class="red-text">CatPhotoApp</h2>
+
+/* 有main和body部分 */
+<main>
+  /* p 也引用了 red-text颜色 */
+  /* a href="#"可以将井号换成链接，点击cat photo机会连接到#的链接  */
+  <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+  /* 给图片加链接，由于href后面是井号，所以可以换成链接 */
+  /* 给image添加第二个class，放在class等号后的括号里，另外中加空格 */
+  <a href="#"><img class="thick-green-border smaller-image" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+
+  /* div 也叫内容划分元素，是一个包裹其他元素的通用容器；此处给div加一个class，让背景变色*/
+  <div　class="silver-background">
+
+    <p>Things cats love:</p>
+    /* 无序列表 */
+    <ul>
+      <li>cat nip</li>
+      <li>laser pointers</li>
+      <li>lasagna</li>
+    </ul>
+
+
+    <p>Top 3 things cats hate:</p>
+    /* 下方有序列表 */
+    <ol>
+      <li>flea treatment</li>
+      <li>thunder</li>
+      <li>other cats</li>
+    </ol>
+  </div>
+
+  /* 给form元素添加一个id，id不能重复，只能作用在一个元素上，class和id冲突时，优先使用id */
+  <form id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
+
+    /* radio button 单选按钮，一组只能选一个， name让两个选项，属于一个类里 */
+    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+
+
+    /* checkbox 多选按钮，checked是默认已经勾选的项目 */
+    <label><input type="checkbox" name="personality" checked> Loving</label>
+    <label><input type="checkbox" name="personality"> Lazy</label>
+    <label><input type="checkbox" name="personality"> Energetic</label><br>
+
+    /* input 输入框，格式为text，有链接，且required为必填项 */
+    <input type="text" placeholder="cat photo URL" required>
+    /* 与上方input是一组 */
+    <button type="submit">Submit</button>
+
+  </form>
+</main>
