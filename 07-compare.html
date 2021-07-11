@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <script>
+
+            function xunhuan()
+            {
+                var i;
+                var alldata="";
+
+                for(i=1; i<=12; i++)
+                {
+                    alldata = alldata + i + "月" + "<br>";
+                }
+                document.getElementById("yilan").innerHTML = alldata;
+            }
+
+            function xunhuan2()
+            {
+                var nianhao = new Array();
+                nianhao[0] ="昭和";
+                nianhao[1] ="平成";
+                nianhao[2] ="令和";
+                var a;
+                for(a=0; a<=2; a++)
+                {
+                    alert(nianhao[a]);
+                }
+            }
+
+            function obj()
+            {
+                var student = new Object();
+                student.name = "tanaka";
+                student.age = 30;
+                student.address = "Tokyo"
+
+                document.getElementById("xuesheng").innerHTML = student.name + "<br>" + student.age + "<br>"+ student.address ;
+            }
+
+
+
+
+
+        </script>
+    </head>
+
+
+    <body>
+
+        Number1:<input id="n1" type="text" name="num1" /><br><br>
+        Number2:<input id="n2" type="text" name="num2" /><br>
+        
+        <br>
+        Result: <p id="jieguo"></p>
+        <button onclick="minus()">比較</button>
+
+        <button onclick="xunhuan()"> 表示 </button>
+        <p id="yilan"> </p>
+
+        <button onclick="xunhuan2()"> ループ </button>
+
+        <button onclick="obj()"> オブジェクト </button>
+
+        <p id="xuesheng"></p>
+
+    </body>
+
+</html>

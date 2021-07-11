@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script>
+            /*
+            function plus()
+            {
+                var x = document.getElementById("n1").value;
+                var y = document.getElementById("n2").value;
+
+                var shu1 = parseInt(x);
+                var shu2 = parseInt(y);
+                var z = shu1 + shu2;
+
+                document.getElementById("jieguo").innerHTML = z;
+            }
+            */
+            function minus()
+            {
+                var x = document.getElementById("n1").value;
+                var y = document.getElementById("n2").value;
+
+                var shu1 = parseInt(x);
+                var shu2 = parseInt(y);
+                var z = shu1 - shu2;
+
+                document.getElementById("jieguo").innerHTML = z;
+            }
+
+        </script>
+    </head>
+
+
+    <body>
+        Number1:<input id="n1" type="text" name="num1" /><br><br>
+        Number2:<input id="n2" type="text" name="num2" /><br>
+        Result: <p id="jieguo"></p>
+
+        <button onclick="minus()"> 足し算　</button>
+
+    </body>
+
+
+
+
+</html>
